@@ -8,10 +8,10 @@ const int SW2_ADC_pin = 34;
 const int SW3_ADC_pin = 35;
 const int SW4_ADC_pin = 39;
 
-const char SW1_ID[] = "SW1-15-";
-const char SW2_ID[] = "SW2-16-";
-const char SW3_ID[] = "SW3-17-";
-const char SW4_ID[] = "SW4-18-";
+const char SW1_ID[] = "SW1";
+const char SW2_ID[] = "SW2";
+const char SW3_ID[] = "SW3";
+const char SW4_ID[] = "SW4";
 
 char multiMessage[10] = "";
 
