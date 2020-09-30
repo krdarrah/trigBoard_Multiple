@@ -1,5 +1,4 @@
 void scanMultiple() {
-
   if (analogRead(SW1_ADC_pin) > 100) {
     strcpy(multiMessage, SW1_ID);
     Serial.println("SW1 Detected");
