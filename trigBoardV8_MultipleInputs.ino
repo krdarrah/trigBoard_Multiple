@@ -1,6 +1,6 @@
 #include "includes.h"
 
-const char fwVersion[] = "8/05/20_Multiple";
+const char fwVersion[] = "10/14/20_Multiple";
 //THIS IS ADDED FOR MULTIPLE INPUTS
 void scanMultiple();
 const int SW1_ADC_pin = 33;

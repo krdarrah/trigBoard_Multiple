@@ -77,7 +77,8 @@ bool pushLogic() {
     Serial.println(F("CONTACT CLOSE"));
     sprintf(pushMessage, "%s %s, %sV", config.triggerClosesMessage, multiMessage, batCharString);//CHANGED FOR MULTI
     rtcInit(config.timerCountDown, true);//reset timer - this is set to true so that when the door opens/closes, you start fresh
-    return true;
+    if (strcmp(multiMessage, "") != 0)//only if SW was triggered
+      return true;
   }
   //**************************************
   if (strcmp(config.trigSelect, "Open") == 0 && contactLatchOpen) {
@@ -98,10 +99,13 @@ bool pushLogic() {
       Serial.println(F("CONTACT CLOSE"));
       sprintf(pushMessage, "%s %s, %sV", config.triggerClosesMessage, multiMessage, batCharString);//CHANGED FOR MULTI
       rtcInit(config.timerCountDown, true);//reset timer
-      return true;
+      if (strcmp(multiMessage, "") != 0)//only if SW was triggered
+        return true;
     }
 
   }
+
+
 
   //**************************************
   if (timerWake && lowBattery) { //priority
